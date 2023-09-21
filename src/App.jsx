@@ -1,5 +1,6 @@
 import { ChatEngine } from "react-chat-engine";
 import "./App.css";
+import ChatFeed from "./components/ChatFeed";
 
 const App = () => {
   const projectId = import.meta.env.VITE_PROJECT_ID;
@@ -9,6 +10,7 @@ const App = () => {
       projectID={projectId}
       userName="javascriptmastery"
       userSecret="123123"
+      renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
     />
   );
 };
